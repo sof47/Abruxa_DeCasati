@@ -1,0 +1,42 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgba(0, 0, 0, 0);
+}
+/* Text and Photo Section */
+p{
+    text-align: justify;
+}
+.text-photo-section {
+    display: flex
+    ;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 101px;
+        padding: 5%;
+        flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1; /* Text takes up 1 part of the available space */
+    max-width: 50%; /* Limits the width of the text section */
+}
+
+.photo-content {
+    flex: 1; /* Image takes up 1 part of the available space */
+    max-width: 50%; /* Limits the width of the image section */
+}
+
+.photo-content img {
+    
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+}
+
+

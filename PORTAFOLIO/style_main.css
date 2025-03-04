@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    background-color: rgb(239, 239, 239);
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: #151515;
+    position: relative;
+    text-align: right;
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 150;
+}
+
+header div a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #4f4f4f;
+    font-size: 1.5rem;
+    font-weight: 50;
+    margin-top: -15px;
+}
+h2{
+    font-weight: 80;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a:hover {
+    color: #D7A6E5;
+    transform: scale(1.1);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #1e1e1e;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.worky {
+    color: #D7A6E5;
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+   
+}
+
+figcaption {
+    text-align: center;
+    color: #737373;
+    font-size: smaller;
+}
+
+.photos {
+    margin: 5%;
+   
+}
+
+.photos img {
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 140px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(17, 17, 17, 0.663);
+}
+
+footer p {
+    margin: 3% 0 0 0;
+    font-size: 0.9rem;
+    font-family: "Mulish", serif;
+}
+a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    a{
+        text-decoration: none;
+        color: #1e1e1e;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .photos img {
+        width: 100%;
+    }
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Menú hamburguesa y su botón */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #151515;
+}
+
+@media (max-width: 768px) {
+    a{
+        text-decoration: none;
+        color: #555555;
+    }
+    header {
+        margin-top: 10%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        display: none; /* Ocultamos el menú original */
+        flex-direction: column; /* Hacemos que los enlaces se apilen verticalmente */
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255); /* Fondo oscuro */
+        text-align: center;
+        padding-top: 20px;
+        z-index: 10;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav.active ul {
+        display: flex; /* Mostramos el menú cuando el botón es clickeado */
+    }
+    .photos {
+        padding-top: 30%;
+        margin: 10%;
+    }
+
+    .photos img {
+        width: 100%;
+    }
+    .hamburger {
+       
+        display: block; /* Mostramos el botón de menú hamburguesa */
+    }
+    /* Initial state - hidden menu */
+nav ul {
+    display: none;
+}
+
+/* Active state - show the menu 
+nav.active ul {
+  display: block;
+}*/
+
+/* Optional: Style for the hamburger menu */
+.hamburger {
+    margin-left: 750%;
+    cursor: pointer;
+    flex-direction: column;
+    margin-top: -244%;
+}
+
+
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding-top: 10%;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
